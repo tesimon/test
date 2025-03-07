@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Davinci</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/kapakana" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/assets/lib/owlcarousel/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/custom.style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  
+    
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top" style="background-color: rgba(255, 255, 255, 0.57);">
+    <div class="container position-relative">
+        
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex flex-column">
+                <span class="fw-bold fs-3 lh-1">Da Vinci</span>
+                <span class="text-muted fs-6 lh-1">Pastry Shop</span>
+            </div>
+        </a>
+
+        
+        <button class="navbar-toggler ms-auto" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarCollapse"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0 text-center">
+                
+                    <li class="nav-item px-lg-2">
+                        
+                            <a href="/story" 
+                               class="nav-link "
+                               aria-current="">
+                                OUR VISION
+                            </a>
+                        
+                    </li>
+                
+                    <li class="nav-item px-lg-2">
+                        
+                            <a href="/products" 
+                               class="nav-link "
+                               aria-current="">
+                                PRODUCTS
+                            </a>
+                        
+                    </li>
+                
+                    <li class="nav-item px-lg-2">
+                        
+                            <a href="/events" 
+                               class="nav-link "
+                               aria-current="">
+                                EVENTS
+                            </a>
+                        
+                    </li>
+                
+                    <li class="nav-item px-lg-2">
+                        
+                            <a href="/gallery" 
+                               class="nav-link "
+                               aria-current="">
+                                GALLERY
+                            </a>
+                        
+                    </li>
+                
+                    <li class="nav-item px-lg-2">
+                        
+                            <a href="/story" 
+                               class="nav-link "
+                               aria-current="">
+                                STORY
+                            </a>
+                        
+                    </li>
+                
+            </ul>
+
+            
+            <div class="nav-item dropdown text-center text-lg-start">
+                <a class="nav-link dropdown-toggle" 
+                   href="#" 
+                   role="button" 
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    🇬🇧 EN
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center py-2" 
+                           href="?lang=en">
+                            <span class="me-2">🇬🇧</span>English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center py-2" 
+                           href="?lang=el">
+                            <span class="me-2">🇬🇷</span>Greek
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Custom CSS for enhanced mobile experience */
+    @media (max-width: 991px) {
+        .navbar-collapse {
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+        .dropdown-menu {
+            margin-left: 1.5rem;
+            width: calc(100% - 3rem);
+        }
+        .nav-item {
+            margin: 0.5rem 0;
+        }
+    }
+    @media (min-width: 992px) {
+        .dropdown-menu-center {
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+        .navbar-brand {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-item.dropdown {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+</style>
+    
+
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    
+
+<div class="container-fluid my-6 mt-0 with-gradient" style="height: 100vh; 
+">
+    <div class="container">
+        <div class="d-flex flex-row justify-content-end align-items-bottom gap-4">
+
+            <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center bg-semitransparent">
+                <h2 class="d-inline-block fw-bold text-dark  rounded-pill px-4 py-1 mb-4 animated bounceInDown" style="font-family: playfair Display;" >Welcome to Davinci</h2>
+                <small class="mb-4 animated bounceInDown col-7">Book Davinci for your dream event and make it unforgettable. Let us bring your vision to life with perfection!</small>
+               <div class="d-flex justify-content-between">
+                
+                <a href="" class=" border border-btn-primary text-dark rounded-pill py-3 px-4 px-md-5 animated bounceInLeft know__more"
+                >Know More</a>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+   
+   <div class="container-fluid py-6">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        
+        <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.3s">
+          <h1 class="display-5 mb-4 text-secondary">GOLD AWARD FOR TASTE 2019</h1>
+          <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a liquip ex ea commodo consequat. Duis aute irure dolor in reprehen derit inate velit cillumdolore eu more cib.</p>
+        </div>
+        <div class="col-lg-6 wow bounceInUp flex-box" data-wow-delay="0.1s" >
+          <img src="/assets/img/davinci-award.png" class="img-fluid rounded" alt="About Us" style="min-height:400px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+    <!-- best product of the month -->
+    <div class="container-xxl py-6" style="background: url(assets/img/Shadow\ 5.png) center center/cover no-repeat;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row img-twice position-relative h-100">
+                        <div class="col-6">
+                            <img class="img-fluid rounded" src="assets/img/IMG_5457.png" alt="">
+                        </div>
+                        <div class="col-6 align-self-end">
+                            <img class="img-fluid rounded" src="assets/img/IMG_5458.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp flex-box" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <p class="text-uppercase mb-2 text-secondary" >// quality and tradition</p>
+                        <div class="display-5 mb-4">THE BEST PRALINES IN TOWN!</div>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- best product of the month End -->
+
+    
+    
+    
+
+    
+  
+<section class="container-fluid py-5 bg-light">
+  <div class="container py-5">
+      <div class="row g-5 align-items-center">
+          
+          <div class="col-lg-6 wow fadeInLeft">
+              <h2 class="display-5 text-primary mb-4">Our Clients Said</h2>
+              <p class="lead mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut a liquip ex ea commodo consequat. Duis aute irure dolor in reprehen derit inate velit cillumdolore eu more cib.</p>
+              <a href="" 
+                 class="btn btn-primary rounded-pill px-4 py-2 hover-scale">
+                  Read More
+                  <i class="fas fa-arrow-right ms-2"></i>
+              </a>
+          </div>
+
+          
+          <div class="col-lg-5 wow fadeInRight rounded border" >
+              <div class="swiper testimonialSwiper">
+                  <div class="swiper-wrapper">
+                      
+                      <div class="swiper-slide">
+                          <div class="testimonial-card bg-white p-4 rounded-4 shadow position-relative">
+                                                            
+
+                              <div class="d-flex align-items-center">
+                                  <div class="flex-shrink-0">
+                                      <img src="assets/img/testimonial-1.jpg" 
+                                           class="rounded-circle author-img" 
+                                           alt="John Doe"
+                                           width="60"
+                                           height="60">
+                                  </div>
+                                  <div class="flex-grow-1 ms-3">
+                                      <h5 class="mb-0">John Doe</h5>
+                                      <small class="text-muted">customer</small>
+                                  </div>
+                              </div>
+                              <div class="rating my-2" aria-label="Rating: 5 stars">
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                            </div>
+                            
+                          
+                          <p class="fs-8 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                          </div>
+                      </div>
+                      
+                      <div class="swiper-slide">
+                          <div class="testimonial-card bg-white p-4 rounded-4 shadow position-relative">
+                                                            
+
+                              <div class="d-flex align-items-center">
+                                  <div class="flex-shrink-0">
+                                      <img src="assets/img/testimonial-1.jpg" 
+                                           class="rounded-circle author-img" 
+                                           alt="John Doe"
+                                           width="60"
+                                           height="60">
+                                  </div>
+                                  <div class="flex-grow-1 ms-3">
+                                      <h5 class="mb-0">John Doe</h5>
+                                      <small class="text-muted">customer</small>
+                                  </div>
+                              </div>
+                              <div class="rating my-2" aria-label="Rating: 5 stars">
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                            </div>
+                            
+                          
+                          <p class="fs-8 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                          </div>
+                      </div>
+                      
+                      <div class="swiper-slide">
+                          <div class="testimonial-card bg-white p-4 rounded-4 shadow position-relative">
+                                                            
+
+                              <div class="d-flex align-items-center">
+                                  <div class="flex-shrink-0">
+                                      <img src="assets/img/testimonial-1.jpg" 
+                                           class="rounded-circle author-img" 
+                                           alt="John Doe"
+                                           width="60"
+                                           height="60">
+                                  </div>
+                                  <div class="flex-grow-1 ms-3">
+                                      <h5 class="mb-0">John Doe</h5>
+                                      <small class="text-muted">customer</small>
+                                  </div>
+                              </div>
+                              <div class="rating my-2" aria-label="Rating: 5 stars">
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                                <i class="fas fa-star text-primary fs-5"></i>
+                                
+                            </div>
+                            
+                          
+                          <p class="fs-8 text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                          </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  
+                  
+          </div>
+      </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-card {
+      height: auto; /* 16:9 ratio base height */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+  }
+  
+  .testimonialSwiper {
+      max-width: 800px;
+      margin-left: auto;
+  }
+  
+  .swiper-slide {
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+  }
+  
+  .swiper-slide-active {
+      opacity: 1;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+      color: var(--bs-primary) !important;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 50%;
+      backdrop-filter: blur(2px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .author-img {
+      border: 2px solid var(--bs-primary);
+      padding: 2px;
+  }
+  
+  @media (max-width: 992px) {
+      .testimonial-card {
+          height: auto;
+          min-height: 400px;
+      }
+      .testimonialSwiper {
+          max-width: 100%;
+          margin-top: 2rem;
+      }
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+
+  // Initialize Swiper AFTER DOM content loads
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialSwiper = new Swiper('.testimonialSwiper', {
+        loop: true,
+        slidesPerView: 1,
+        effect: 'fade',
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+      
+
+
+ 
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      },
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+          768: {
+              effect: 'slide',
+              fadeEffect: false
+          }
+      }
+});
+});
+</script>
+
+    
+   
+    <div class="container-fluid team py-6 flex-box">
+        <div class="container d-flex flex-column">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Most loved products</h1>
+            </div>
+            <div class="row g-3">
+                
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/product-1.png" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">kantaifi</h4>
+                            <p class="text-secondary mb-0">syrupy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.30000000000000004s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/product-2.png" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">Mille Feuille</h4>
+                            <p class="text-secondary mb-0">yeast cake</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/product-3.png" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">Martin Hill</h4>
+                            <p class="text-secondary mb-0">puff pastry</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-btn-primary rounded-pill px-4 py-1 my-3 align-self-end col-2 text-center">Discover more</small>
+        </div>
+    </div>
+    
+    
+    <div class="container-fluid team py-6 flex-box">
+        <div class="container d-flex flex-column">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Limited eddition seasonal pastries</h1>
+            </div>
+            <div class="row g-3">
+                
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/seasonal-product-1.png" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">dubai chocolate</h4>
+                            <p class="text-secondary mb-0">chocolate bar</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.30000000000000004s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/seasonal-product-2.png" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">Panettone</h4>
+                            <p class="text-secondary mb-0">yeast cake</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/seasonal-product-3.png" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">Mille Feuille</h4>
+                            <p class="text-secondary mb-0">puff pastry</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-btn-primary rounded-pill px-4 py-1 my-3 align-self-end col-2 text-center">Discover more</small>
+        </div>
+    </div>
+
+     
+     
+
+
+
+    <div class="container-fluid event py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Follow us on Instagram</h1>
+            </div>
+            <div class="tab-class text-center">
+                <div class="tab-content">
+                    
+                    <div id="tab-all" class="tab-pane fade show active">
+                        <div class="row g-4">
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5437.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5437.png" data-lightbox="event-1" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.2s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5439.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5439.png" data-lightbox="event-2" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.30000000000000004s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5438.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5438.png" data-lightbox="event-3" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.4s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5444.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5444.png" data-lightbox="event-4" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5445.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5445.png" data-lightbox="event-5" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.6000000000000001s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5446.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5446.png" data-lightbox="event-6" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7000000000000001s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5447.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5447.png" data-lightbox="event-7" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.8s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5455.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5455.png" data-lightbox="event-8" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.9s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/IMG_5456.png" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        
+                                        <a href="/assets/img/IMG_5456.png" data-lightbox="event-9" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+  
+     
+ <div class="container-fluid footer pt-6 mt-6 mb-0 bg-light wow bounceInUp" data-wow-delay="0.1s">
+  <div class="container">
+      <div class="row d-flex justify-content-center " style="gap: 50px;">
+        <div class="footer-brand text-center" style="width: max-content;position: relative !important;">
+            <div class="text-dark fs-1" >Da Vinci</div>
+            <p class="text-dark " style="position: absolute;left: 50%;bottom: -30px;transform: translate(-50%, 0);width: max-content;">pastry shop</p>
+        </div>
+        <div class="col-lg-12 col-md-6">
+            <div class="footer-item">
+                <div class="d-flex flex-row align-items-center justify-content-center ">
+                    
+                    <a class="text-body mb-3 mx-3" href="/story">
+                      OUR VISION
+                    </a>
+                    
+                    <a class="text-body mb-3 mx-3" href="/products">
+                      PRODUCTS
+                    </a>
+                    
+                    <a class="text-body mb-3 mx-3" href="/store">
+                      STORE
+                    </a>
+                    
+                    <a class="text-body mb-3 mx-3" href="/events">
+                      EVENTS
+                    </a>
+                    
+                    <a class="text-body mb-3 mx-3" href="/gallery">
+                      GALLERY
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="underline" style="width: 100%; height: 1px;background:#E4E7EC;"></div>
+          <div class="col-lg-12 col-md-6">
+              <div class="footer-item d-flex justify-content-between">
+                  <p class="lh-lg mb-4" style="color: #667085;"> © 2025 DIGIPATH E.E. All rights reserved.</p>
+                  <div class="footer-icon d-flex">
+                      
+                      <a class="btn btn-sm-square me-2 rounded-circle" href="#" style="background-color: #667085;color: white;">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      
+                      <a class="btn btn-sm-square me-2 rounded-circle" href="#" style="background-color: #667085;color: white;">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      
+                      <a class="btn btn-sm-square me-2 rounded-circle" href="#" style="background-color: #667085;color: white;">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      
+                      <a class="btn btn-sm-square me-2 rounded-circle" href="#" style="background-color: #667085;color: white;">
+                          <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      
+                  </div>
+              </div>
+          </div>
+         
+      </div>
+  </div>
+</div>
+  
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/lib/wow/wow.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/counterup/counterup.min.js"></script>
+    <script src="/assets/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>

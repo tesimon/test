@@ -1,0 +1,32 @@
+[
+    {
+        "name": "kantaifi",
+        "role": "syrupy",
+        "image": "product-1.png",
+        "social": {
+            "facebook": "#",
+            "twitter": "#",
+            "instagram": "#"
+        }
+    },
+    {
+        "name": "Mille Feuille",
+        "role": "yeast cake",
+        "image": "product-2.png",
+        "social": {
+            "facebook": "#",
+            "twitter": "#",
+            "instagram": "#"
+        }
+    },
+    {
+        "name": "Martin Hill",
+        "role": "puff pastry",
+        "image": "product-3.png",
+        "social": {
+            "facebook": "#",
+            "twitter": "#",
+            "instagram": "#"
+        }
+    }
+]

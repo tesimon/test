@@ -1,0 +1,70 @@
+{
+    "hero": {
+      "subtitle": "Welcome to Davinci",
+      "title": "Book <span class='text-primary'>Dav</span>inchi For Your Dream Event",
+      "image": "hero.png",
+      "buttons": [
+        {"text": "Book Now", "url": "#"},
+        {"text": "Know More", "url": "#"}
+      ]
+    },
+    "services": {
+      "title": "What We Offer",
+      "items": [
+        {
+          "icon": "fas fa-cheese",
+          "title": "Wedding Services",
+          "content": "Contrary to popular belief, ipsum is not simply random.",
+          "url": "#"
+        },
+        {
+          "icon": "fas fa-pizza-slice",
+          "title": "Corporate Catering",
+          "content": "Contrary to popular belief, ipsum is not simply random.",
+          "url": "#"
+        }
+      ]
+    },
+    "events": {
+      "title": "Our Social & Professional Events Gallery",
+      "categories": [
+        {"id": "tab-1", "name": "All Events", "active": true},
+        {"id": "tab-2", "name": "Wedding"},
+        {"id": "tab-3", "name": "Corporate"}
+      ],
+      "items": [
+        {
+          "image": "event-1.jpg",
+          "category": "Wedding",
+          "lightbox": "event-1"
+        },
+        {
+          "image": "event-2.jpg",
+          "category": "Corporate",
+          "lightbox": "event-2"
+        }
+      ]
+    },
+    "testimonials": {
+      "items": [
+        {
+          "image": "testimonial-1.jpg",
+          "name": "Person Name",
+          "role": "Profession",
+          "rating": 5,
+          "content": "Lorem ipsum dolor sit amet elit, sed do eiusmod tempor ut labore et dolore magna aliqua."
+        }
+      ]
+    },
+    "blog": {
+      "title": "Be First Who Read News",
+      "posts": [
+        {
+          "image": "blog-1.jpg",
+          "date": "16 Sep",
+          "title": "How to get more test in your food from",
+          "url": "#"
+        }
+      ]
+    }
+  }

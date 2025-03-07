@@ -1,0 +1,24 @@
+{
+  "links": [
+      {
+          "title": "OUR VISION",
+          "url": "/story"
+      },
+      {
+          "title": "PRODUCTS",
+          "url": "/products"
+      },
+      {
+          "title": "EVENTS",
+          "url": "/events"
+      },
+      {
+          "title": "GALLERY",
+          "url": "/gallery"
+      },
+      {
+          "title": "STORY",
+          "url": "/story"
+      }
+  ]
+}

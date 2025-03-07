@@ -1,0 +1,57 @@
+.btn-primary{
+    background-color: #791B36;
+    color: aliceblue;
+    border-radius: 5px !important;
+    border: none;
+}
+.text-primary{
+    color: gold !important;
+}
+
+.text-secondary{
+    color: #791B36 !important;
+}
+
+
+
+.bg-semitransparent{
+    background: url("../img/Shadow 5.png");
+    border: 16px solid rgba(252, 173, 15, 0.417);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: black;
+    height: 400px;
+}
+
+.custom-bg{
+    /* background-color: #B7C8E6; */
+   
+    /* background-image: linear-gradient(#B7C8E6 0%, #FDD9A7 100%); */
+    /* background: url("../img/hand-drawn-baker-cartoon-illustration.png") no-repeat center center/cover; */
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center !important;
+    height: 100vh;
+}
+
+
+.with-gradient{
+    background: url("../img/30714.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end !important;
+    padding-bottom: 20px;
+    
+}
+
+.flex-box{
+    display : flex !important;
+    justify-content: center !important;
+    align-items:center !important;
+
+}

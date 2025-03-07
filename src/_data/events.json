@@ -1,0 +1,90 @@
+{
+    "eventCategories": [
+        {
+            "id": "all",
+            "title": "All Events",
+            "events": [
+                {
+                    "image": "event-1.jpg",
+                    "type": "Wedding"
+                },
+                {
+                    "image": "event-2.jpg",
+                    "type": "Corporate"
+                },
+                {
+                    "image": "event-3.jpg",
+                    "type": "Wedding"
+                },
+                {
+                    "image": "event-4.jpg",
+                    "type": "Corporate"
+                },
+                {
+                    "image": "event-5.jpg",
+                    "type": "Wedding"
+                },
+                {
+                    "image": "event-6.jpg",
+                    "type": "Corporate"
+                }
+               
+            ]
+        },
+        {
+            "id": "wedding",
+            "title": "Wedding",
+            "events": [
+                {
+                    "image": "event-1.jpg",
+                    "type": "Wedding"
+                },
+                {
+                    "image": "event-3.jpg",
+                    "type": "Wedding"
+                },
+                {
+                    "image": "event-5.jpg",
+                    "type": "Wedding"
+                }
+            ]
+        },
+        {
+            "id": "corporate",
+            "title": "Corporate",
+            "events": [
+                {
+                    "image": "event-2.jpg",
+                    "type": "Corporate"
+                },
+                {
+                    "image": "event-4.jpg",
+                    "type": "Corporate"
+                },
+                {
+                    "image": "event-6.jpg",
+                    "type": "Corporate"
+                }
+            ]
+        },
+        {
+            "id": "birthday",
+            "title": "Birthday",
+            "events": [
+                {
+                    "image": "event-7.jpg",
+                    "type": "Birthday"
+                },
+                {
+                    "image": "event-8.jpg",
+                    "type": "Birthday"
+                },
+                {
+                    "image": "event-9.jpg",
+                    "type": "Birthday"
+                }
+            ]
+        }
+       
+    ]
+}

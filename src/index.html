@@ -1,0 +1,237 @@
+---
+title: Home
+description: "Hey I'm on the home page only"
+layout : layouts/base.njk
+url: /
+---
+
+{# ===================== SPINNER ===================== #}
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    {# ===================== HERO SECTION ===================== #}
+
+<div class="container-fluid my-6 mt-0 with-gradient" style="height: 100vh; 
+">
+    <div class="container">
+        <div class="d-flex flex-row justify-content-end align-items-bottom gap-4">
+
+            <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-center bg-semitransparent">
+                <h2 class="d-inline-block fw-bold text-dark  rounded-pill px-4 py-1 mb-4 animated bounceInDown" style="font-family: playfair Display;" >Welcome to Davinci</h2>
+                <small class="mb-4 animated bounceInDown col-7">Book Davinci for your dream event and make it unforgettable. Let us bring your vision to life with perfection!</small>
+               <div class="d-flex justify-content-between">
+                {# <a href="" class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Book Now</a> #}
+                <a href="" class=" border border-btn-primary text-dark rounded-pill py-3 px-4 px-md-5 animated bounceInLeft know__more"
+                >Know More</a>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    {% include "partials/about.njk" %}  
+
+    <!-- best product of the month -->
+    <div class="container-xxl py-6" style="background: url(assets/img/Shadow\ 5.png) center center/cover no-repeat;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row img-twice position-relative h-100">
+                        <div class="col-6">
+                            <img class="img-fluid rounded" src="assets/img/IMG_5457.png" alt="">
+                        </div>
+                        <div class="col-6 align-self-end">
+                            <img class="img-fluid rounded" src="assets/img/IMG_5458.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp flex-box" data-wow-delay="0.5s">
+                    <div class="h-100">
+                        <p class="text-uppercase mb-2 text-secondary" >// quality and tradition</p>
+                        <div class="display-5 mb-4">THE BEST PRALINES IN TOWN!</div>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- best product of the month End -->
+
+    {# ===================== MENU SECTION ===================== #}
+    {# <div class="container-fluid menu bg-light py-6 my-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-btn-primary rounded-pill px-4 py-1 mb-3">Our Menu</small>
+                <h1 class="display-5 mb-5">Most Popular Food in the World</h1>
+            </div>
+            <div class="tab-class text-center">
+                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
+                    {% for category in menu.categories %}
+                    <li class="nav-item p-2">
+                        <a class="d-flex py-2 mx-2 border border-btn-primary bg-white rounded-pill {% if loop.first %}active{% endif %}" 
+                           data-bs-toggle="pill" href="#tab-{{ category.id }}">
+                            <span class="text-dark" style="width: 150px;">{{ category.title }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="tab-content">
+                    {% for category in menu.categories %}
+                    <div id="tab-{{ category.id }}" class="tab-pane fade show {% if loop.first %}active{% endif %}">
+                        <div class="row g-4">
+                            {% for item in category.items %}
+                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="{{ loop.index * 0.1 }}s">
+                                <div class="menu-item d-flex align-items-center">
+                                    <img class="flex-shrink-0 img-fluid rounded-circle" src="/assets/img/{{ item.image }}" alt="">
+                                    <div class="w-100 d-flex flex-column text-start ps-4">
+                                        <div class="d-flex justify-content-between border-2 border-bottom border-btn-primary pb-2 mb-2">
+                                            <h4>{{ item.name }}</h4>
+                                            <h4 class="text-primary">{{ item.price }}</h4>
+                                        </div>
+                                        <p class="mb-0">{{ item.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div> #}
+    
+
+    {# ===================== TESTIMONIALS SECTION ===================== #}
+  {% include "sections/testimonials.njk" %}
+
+    {# ===================== POPULAR PRODUCTS SECTION ===================== #}
+   
+    <div class="container-fluid team py-6 flex-box">
+        <div class="container d-flex flex-column">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Most loved products</h1>
+            </div>
+            <div class="row g-3">
+                {% for pProduct in popularProducts %}
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="{{ 0.1 + (loop.index0 * 0.2) }}s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/{{ pProduct.image }}" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">{{ pProduct.name }}</h4>
+                            <p class="text-secondary mb-0">{{ pProduct.role }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-btn-primary rounded-pill px-4 py-1 my-3 align-self-end col-2 text-center">Discover more</small>
+        </div>
+    </div>
+    {# ===================== SEASONAL PRODUCTS SECTION ===================== #}
+    
+    <div class="container-fluid team py-6 flex-box">
+        <div class="container d-flex flex-column">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Limited eddition seasonal pastries</h1>
+            </div>
+            <div class="row g-3">
+                {% for sProduct in seasonalProducts %}
+                <div class="col-lg-4 col-md-6 wow bounceInUp" data-wow-delay="{{ 0.1 + (loop.index0 * 0.2) }}s">
+                    <div class="team-item rounded">
+                        <img class="img-fluid rounded-top" src="/assets/img/{{ sProduct.image }}" alt="">
+                        <div class="team-content text-start py-3 bg-white rounded-bottom">
+                            <h4 class="text-dark">{{ sProduct.name }}</h4>
+                            <p class="text-secondary mb-0">{{ sProduct.role }}</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-btn-primary rounded-pill px-4 py-1 my-3 align-self-end col-2 text-center">Discover more</small>
+        </div>
+    </div>
+
+     {# ===================== EVENTS SECTION ===================== #}
+     {# <div class="container-fluid event py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-btn-primary rounded-pill px-4 py-1 mb-3">Latest Events</small>
+                <h1 class="display-5 mb-5">Our Social & Professional Events Gallery</h1>
+            </div>
+            <div class="tab-class text-center">
+                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
+                    {% for category in events.eventCategories %}
+                    <li class="nav-item p-2">
+                        <a class="d-flex mx-2 py-2 border border-btn-primary bg-light rounded-pill {% if loop.first %}active{% endif %}" 
+                           data-bs-toggle="pill" href="#tab-{{ category.id }}">
+                            <span class="text-dark" style="width: 150px;">{{ category.title }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="tab-content">
+                    {% for category in events.eventCategories %}
+                    <div id="tab-{{ category.id }}" class="tab-pane fade show {% if loop.first %}active{% endif %}">
+                        <div class="row g-4">
+                            {% for event in category.events %}
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="{{ loop.index * 0.1 }}s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/{{ event.image }}" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        <h4 class="me-auto">{{ event.type }}</h4>
+                                        <a href="/assets/img/{{ event.image }}" data-lightbox="event-{{ loop.index }}" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div> #}
+
+
+
+    <div class="container-fluid event py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Follow us on Instagram</h1>
+            </div>
+            <div class="tab-class text-center">
+                <div class="tab-content">
+                    {% for category in instaPosts.eventCategories %}
+                    <div id="tab-{{ category.id }}" class="tab-pane fade show {% if loop.first %}active{% endif %}">
+                        <div class="row g-4">
+                            {% for event in category.images %}
+                            <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="{{ loop.index * 0.1 }}s">
+                                <div class="event-img position-relative">
+                                    <img class="img-fluid rounded w-100" src="/assets/img/{{ event.image }}" alt="">
+                                    <div class="event-overlay d-flex flex-column p-4">
+                                        {# <h4 class="me-auto">{{ event.type }}</h4> #}
+                                        <a href="/assets/img/{{ event.image }}" data-lightbox="event-{{ loop.index }}" class="my-auto">
+                                            <i class="fas fa-search-plus text-dark fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+  

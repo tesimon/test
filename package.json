@@ -1,0 +1,16 @@
+{
+  "name": "davinci-v1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+
+  }
+}

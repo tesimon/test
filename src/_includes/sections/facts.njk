@@ -1,0 +1,46 @@
+{# src/_includes/sections/facts.njk #}
+<!-- Facts Start -->
+<div class="container-fluid faqt py-6">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    {% for stat in facts.stats %}
+                    <div class="col-sm-4 wow bounceInUp" data-wow-delay="{{ 0.3 + loop.index0 * 0.2 }}s">
+                        <div class="faqt-item bg-primary rounded p-4 text-center">
+                            <i class="{{ stat.icon }} fa-4x mb-4 text-white"></i>
+                            <h1 class="display-4 fw-bold" data-toggle="counter-up">{{ stat.value }}</h1>
+                            <p class="text-dark text-uppercase fw-bold mb-0">{{ stat.label }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                <div class="video">
+                    <button type="button" class="btn btn-play" data-bs-toggle="modal" data-src="{{ facts.video_url }}" data-bs-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">{{ facts.video_title }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Facts End -->

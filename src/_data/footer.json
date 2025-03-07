@@ -1,0 +1,48 @@
+{
+    "brand": "Da Vinci",
+    "subtext": "pastry shop",
+    
+    "socials": [
+        {
+            "icon": "fab fa-facebook-f",
+            "url": "#"
+        },
+        {
+            "icon": "fab fa-twitter",
+            "url": "#"
+        },
+        {
+            "icon": "fab fa-instagram",
+            "url": "#"
+        },
+        {
+            "icon": "fab fa-linkedin-in",
+            "url": "#"
+        }
+    ],
+    "quickLinks": {
+        "links": [
+            {
+                "title": "OUR VISION",
+                "url": "/story"
+            },
+            {
+                "title": "PRODUCTS",
+                "url": "/products"
+            },
+            {
+                "title": "STORE",
+                "url": "/store"
+            },
+            {
+                "title": "EVENTS",
+                "url": "/events"
+            },
+            {
+                "title": "GALLERY",
+                "url": "/gallery"
+            }
+        ]
+    },
+    "copyrights": "© 2025 DIGIPATH E.E. All rights reserved."
+}

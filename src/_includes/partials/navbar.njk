@@ -1,0 +1,123 @@
+{# ===================== NAVBAR ===================== #}
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top" style="background-color: rgba(255, 255, 255, 0.57);">
+    <div class="container position-relative">
+        {# Left-aligned Logo #}
+        <a class="navbar-brand" href="index.html">
+            <div class="d-flex flex-column">
+                <span class="fw-bold fs-3 lh-1">Da Vinci</span>
+                <span class="text-muted fs-6 lh-1">Pastry Shop</span>
+            </div>
+        </a>
+
+        {# Mobile Toggle (Right-aligned) #}
+        <button class="navbar-toggler ms-auto" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarCollapse"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        {# Navigation Content #}
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            {# Centered Navigation Links #}
+            <ul class="navbar-nav mx-auto mb-3 mb-lg-0 text-center">
+                {% for link in navigation.links %}
+                    <li class="nav-item px-lg-2">
+                        {% if link.dropdown %}
+                            <div class="dropdown">
+                                <a class="nav-link dropdown-toggle" 
+                                   href="#" 
+                                   role="button" 
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    {{ link.title }}
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-center border-0 shadow">
+                                    {% for sublink in link.dropdown %}
+                                        <li>
+                                            <a href="{{ sublink.url}}" 
+                                               class="dropdown-item py-2 px-3">
+                                                {{ sublink.title }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% else %}
+                            <a href="{{ link.url }}" 
+                               class="nav-link {% if request.path == link.url %}active{% endif %}"
+                               aria-current="{% if request.path == link.url %}page{% endif %}">
+                                {{ link.title }}
+                            </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            {# Right-aligned Language Switcher #}
+            <div class="nav-item dropdown text-center text-lg-start">
+                <a class="nav-link dropdown-toggle" 
+                   href="#" 
+                   role="button" 
+                   data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    {{ '🇬🇷 EL' if lang == 'el' else '🇬🇧 EN' }}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center py-2" 
+                           href="?lang=en">
+                            <span class="me-2">🇬🇧</span>English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center py-2" 
+                           href="?lang=el">
+                            <span class="me-2">🇬🇷</span>Greek
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<style>
+    /* Custom CSS for enhanced mobile experience */
+    @media (max-width: 991px) {
+        .navbar-collapse {
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+        }
+        .dropdown-menu {
+            margin-left: 1.5rem;
+            width: calc(100% - 3rem);
+        }
+        .nav-item {
+            margin: 0.5rem 0;
+        }
+    }
+    @media (min-width: 992px) {
+        .dropdown-menu-center {
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        .navbar-nav .nav-item {
+            position: relative;
+        }
+        .navbar-brand {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-item.dropdown {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+</style>

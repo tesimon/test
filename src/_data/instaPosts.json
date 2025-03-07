@@ -1,0 +1,48 @@
+{
+    "eventCategories": [
+        {
+            "id": "all",
+            "title": "All Events",
+            "images": [
+                {
+                    "image": "IMG_5437.png",
+                    "type": "All"
+                },
+                {
+                    "image": "IMG_5439.png",
+                    "type": "All"
+                },
+                {
+                    "image": "IMG_5438.png",
+                    "type": "all"
+                },
+                {
+                    "image": "IMG_5444.png",
+                    "type": "all"
+                },
+                {
+                    "image": "IMG_5445.png",
+                    "type": "all"
+                },
+                {
+                    "image": "IMG_5446.png",
+                    "type": "all"
+                },
+                {
+                    "image": "IMG_5447.png",
+                    "type": "all"
+                },
+                {
+                    "image": "IMG_5455.png",
+                    "type": "all"
+                },
+                {
+                    "image": "IMG_5456.png",
+                    "type": "all"
+                }
+               
+            ]
+        }
+       
+    ]
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: linear-gradient(135deg, #eda70f 0%, #e88711 100%);
+            --burgundy: #5A0A1D;
+            --cream: aliceblue;
+            --dark: #1A0A0A;
+            --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            align-items: center;
+            padding: 0 8%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding-right: 15%;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: transform 1.2s var(--transition), opacity 1.2s var(--transition);
+        }
+
+        .content.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .ornamental-divider {
+            width: 120px;
+            height: 4px;
+            background: var(--gold);
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 1s var(--transition) 0.3s;
+        }
+
+        .visible .ornamental-divider {
+            transform: scaleX(1);
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 span {
+            display: inline-block;
+            transform: translateY(100%);
+            transition: transform 0.8s var(--transition);
+        }
+
+        .visible h1 span {
+            transform: translateY(0);
+        }
+
+        p {
+            color: rgba(26, 10, 10, 0.8);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin: 2rem 0 3rem;
+            max-width: 480px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s var(--transition) 0.4s;
+        }
+
+        .visible p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 18px 45px;
+            /* background: var(--burgundy); */
+            background: url("/assets/img/orangeBG.svg") center center;
+            color: var(--cream);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s var(--transition) 0.6s;
+        }
+
+        .visible .cta-button {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255,255,255,0.15), 
+                transparent);
+            transition: 0.6s var(--transition);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .image-container {
+            position: relative;
+            height: 80vh;
+            perspective: 1200px;
+        }
+
+        .image-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+            filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.15));
+            transform: translateZ(50px);
+            transition: transform 0.8s var(--transition);
+        }
+
+        /* .decorative-border {
+            position: absolute;
+            width: 102%;
+            height: 104%;
+            top: -2%;
+            left: -1%;
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #D4AF37, #B8972E) 1;
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+            pointer-events: none;
+            transform: translateZ(30px);
+        } */
+
+        .gold-flourish {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .gold-flourish.tl {
+            top: -20%;
+            left: -15%;
+            width: 400px;
+            transform: rotate(-15deg);
+            animation: float 12s infinite var(--transition);
+        }
+
+        .gold-flourish.br {
+            bottom: -25%;
+            right: -15%;
+            width: 500px;
+            transform: rotate(15deg);
+            animation: float 14s infinite var(--transition);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-15deg); }
+            50% { transform: translateY(-40px) rotate(-18deg); }
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 70%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+           
+            transition: opacity 0.8s var(--transition) 1s;
+        }
+
+        .visible .scroll-hint {
+            opacity: 1;
+        }
+
+        .scroll-hint span {
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            color: white;
+            background: url("/assets/img/orangeBG.svg") center center no-repeat;
+            background-size: contain;
+        }
+
+        .scroll-hint::after {
+            content: '';
+            width: 1px;
+            height: 40px;
+            background: var(--burgundy);
+            animation: scrollHint 2s infinite;
+        }
+
+        @keyframes scrollHint {
+            0%, 100% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(20px); opacity: 0; }
+        }
+
+        @media (max-width: 1200px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 80px 5%;
+                height: auto;
+            }
+            
+            .content {
+                padding-right: 0;
+                margin-bottom: 60px;
+            }
+            
+            .image-container {
+                height: 60vh;
+                margin: 0 -5%;
+            }
+            
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            
+            .main-image {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            .decorative-border {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="content">
+            <h1><span>Book Davinci</span><br><span>for your dream event and make it unforgettable.</span></h1>
+            <div class="ornamental-divider"></div>
+            <p>Immerse yourself in a world where heritage craftsmanship meets contemporary luxury, creating pieces that transcend generations.</p>
+            <a href="#" class="cta-button">
+                <span>Know more</span>
+            </a>
+            <div class="scroll-hint">
+                <span>EXPLORE</span>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="/assets/img/Adobe Express - file.png" 
+                     alt="Luxury craftsmanship" 
+                     class="main-image">
+                <div class="decorative-border"></div>
+            </div>
+            <img src="https://img.freepik.com/free-vector/black-floral-ornament_1048-1082.jpg?t=st=1740759572~exp=1740763172~hmac=382c97e8cba6ed80cb75b02701230c2f6ebf2e32c90408a79be14d8c493e435d&w=740" class="gold-flourish tl">
+            <img src="https://img.freepik.com/free-vector/black-floral-ornament_1048-1082.jpg?t=st=1740759572~exp=1740763172~hmac=382c97e8cba6ed80cb75b02701230c2f6ebf2e32c90408a79be14d8c493e435d&w=740" class="gold-flourish br">
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer with thresholds
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.25 });
+
+        observer.observe(document.querySelector('.content'));
+
+        // Parallax effect with damping
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            const scrolled = window.pageYOffset;
+            const imageWrapper = document.querySelector('.image-wrapper');
+            
+            // Dampen the movement
+            const dampen = 0.3;
+            const yOffset = scrolled * dampen;
+            
+            imageWrapper.style.transform = `translateY(${-yOffset}px)`;
+            
+            // Smooth stop
+            scrollTimeout = setTimeout(() => {
+                imageWrapper.style.transition = 'transform 1.2s var(--transition)';
+                imageWrapper.style.transform = `translateY(${-yOffset}px)`;
+            }, 100);
+        });
+
+        // Mouse-tilt effect
+        document.addEventListener('mousemove', (e) => {
+            const imageWrapper = document.querySelector('.image-wrapper');
+            const x = (window.innerWidth / 2 - e.clientX) / 30;
+            const y = (window.innerHeight / 2 - e.clientY) / 30;
+            
+            imageWrapper.style.transform = `
+                rotateY(${x}deg) 
+                rotateX(${y}deg) 
+                translateZ(50px)
+            `;
+        });
+
+        // Reset tilt on mouse leave
+        document.querySelector('.image-container').addEventListener('mouseleave', () => {
+            document.querySelector('.image-wrapper').style.transform = 'translateZ(50px)';
+        });
+    </script>
+</body>
+</html>

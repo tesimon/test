@@ -1,0 +1,15 @@
+{# src/_includes/sections/hero-menu.njk #}
+<!-- Hero Start -->
+<div class="container-fluid bg-light py-6 my-6 mt-0">
+    <div class="container text-center animated bounceInDown">
+        <h1 class="display-1 mb-4">{{ menu.hero.title }}</h1>
+        <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+            {% for item in menu.hero.breadcrumbs %}
+            <li class="breadcrumb-item{% if loop.last %} text-dark{% endif %}"{% if loop.last %} aria-current="page"{% endif %}>
+                {% if item.url %}<a href="{{ item.url }}">{% endif %}{{ item.text }}{% if item.url %}</a>{% endif %}
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+<!-- Hero End -->

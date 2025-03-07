@@ -1,0 +1,18 @@
+[
+    {
+        "name": "dubai chocolate",
+        "role": "chocolate bar",
+        "image": "seasonal-product-1.png"
+        
+    },
+    {
+        "name": "Panettone",
+        "role": "yeast cake",
+        "image": "seasonal-product-2.png"
+    },
+    {
+        "name": "Mille Feuille",
+        "role": "puff pastry",
+        "image": "seasonal-product-3.png"
+    }
+]
