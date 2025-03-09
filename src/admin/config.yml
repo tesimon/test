@@ -1,20 +1,80 @@
 backend:
-  name: test-repo
-  
-media_folder: "_site"
-public_folder: "_site"
+  name: github
+  repo: tesimon/test
+  branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload media for {{collection}} “{{slug}}”"
+    deleteMedia: "Delete media from {{collection}} “{{slug}}”"
+
+media_folder: "src/assets"
+public_folder: "/assets"
+
 collections:
-  - name: "davinci"
-    label: "davinci"
-    folder: "src/_includes"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Featured Image", name: "image", widget: "image" }
-      - { label: "Image caption", name: "imageAlt", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About Page"
+        file: "src/_data/about.json"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+          - { label: "Small Title", name: "smallTitle", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string", required: false }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
+
+      - name: "footer"
+        label: "Footer Content"
+        file: "src/_data/footer.json"
+        fields:
+          - { label: "Brand Name", name: "brand", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "string" }
+          - label: "Social Media Links"
+            name: "socials"
+            widget: "list"
+            fields:
+              - { label: "Icon Class", name: "icon", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Quick Links"
+            name: "quickLinks"
+            widget: "object"
+            fields:
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+          - { label: "Copyright Text", name: "copyrights", widget: "string" }
+
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - name: "home"
+        label: "Home Page Content"
+        file: "src/_data/home.json"
+        fields:  # Added fields section for home.json
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - label: "Featured Products"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Product Name", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Price", name: "price", widget: "number" }
+          - { label: "Call to Action Text", name: "ctaText", widget: "string" }
+          - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+  # Remove the admin collection unless you specifically need to edit config.yml through CMS
